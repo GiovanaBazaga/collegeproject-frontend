@@ -1,26 +1,19 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Home from './pages/Home/Home'; // Assumindo que você tem um componente para a página principal
+import Login from './pages/Login/Login'; // Componente da página de login
+import Register from './pages/Register/Register';
 
-function App() {
+const App: React.FC = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/home" Component={Home} />
+        <Route path="/register" Component={Register} />
+        <Route path="/" Component={Login} />
+      </Routes>
+    </Router>
   );
-}
+};
 
 export default App;
