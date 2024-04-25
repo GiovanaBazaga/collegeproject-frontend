@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 :root{
     --primary-color: #7001FD;
     --secondary-color: #1E2772;
@@ -10,10 +12,11 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
 }
 
-html, body{
-    height: 100%;
+body {
+    height: 100vh;
 }
 
 main{
@@ -21,25 +24,30 @@ main{
     flex-direction: row;
     align-items: center;
     justify-content: center;
+    height: 100%;
+    width: 100%;
+    border: 2px solid var(--secondary-color);
+    border-radius: 8px;
+    box-shadow:0px 8px 12px rgba(148.23004603385925, 64.33935597538948, 255, 0.20000000298023224);
 
     section{
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        height: 100%;
+        height: 100%;      
     }
 
     .main-section{
         gap: 8px;
-
         flex-grow: 1;
-        background-color: var(--gray-bg);
+        background-color: var(--gray-bg);     
+        padding: 77px;
     }
 
     .form-section{
         flex-grow: 0.3;
-        padding: 0 35px;
+        padding: 35px;
 
         img{
             margin-bottom: 30px;
@@ -53,30 +61,54 @@ main{
 
         form{
             width: 100%;
-        }
-    
-        input{
-            border: none;
-            border-radius: 8px 0 0 8px;
-            background-color: var(--gray-secondary-bg);
-    
-            color: var(--text-color);
-            font-size: 16px;
-            padding: 12px 0 12px 20px;
-            width: 100%;
-        }
-
-        .icon{
             display: flex;
-            width: 100%;
-            border-radius: 0 8px 8px 0;
-            padding: 12px;
-            background-color: var(--primary-color);
+            flex-direction: column;
+            gap: 24px;
+            margin-bottom: 34px;
 
-            img{
-                height: 20px;
+            span{
+                font-size: 14px;
+                text-decoration: underline;
+                color: var(--secondary-color);
+                text-align: end;
             }
         }
+        
+        .input-wrapper {
+            color: var(--text-color);
+            font-size: 16px;
+            text-align: start;
+        
+            label {
+                margin-bottom: 10px;
+            }
+        
+            .input-content {
+                width: 100%;
+                border-radius: 8px;
+                display: flex;
+                
+                .icon {
+                    padding: 12px;
+                    background-color: var(--primary-color);
+                    border-radius: 0 8px 8px 0;
+        
+                    img {
+                        height: 20px;
+                    }
+                }
+        
+                input {
+                    border: none;
+                    border-radius: 8px 0 0 8px;
+                    background-color: var(--gray-secondary-bg);
+                    padding: 12px 0 12px 20px;
+                    width: 100%;
+                }
+            }
+        }
+
+
     
     .btn-wrapper{
         display: flex;

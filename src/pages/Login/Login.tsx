@@ -56,36 +56,38 @@ function Login() {
         <h2>Faça login na sua conta</h2>
 
         <form>
-          <div className="form-group">
+          <div className="input-wrapper">
             <label>Email</label>
-            <input type="email" className="form-control" id="email" placeholder="Enter Name"
-
-              value={email}
-              onChange={(event) => {
-                setEmail(event.target.value);
-              }}
-            />
-
-            <div className="icon">
-              <img src={icoEmail} alt="icon" />
+            <div className="input-content">
+              <input type="email" className="form-control" id="email" placeholder="maria@gmail.com"
+                value={email}
+                onChange={(event) => {
+                  setEmail(event.target.value);
+                }}
+              />
+              <div className="icon">
+                <img src={icoEmail} alt="icon" />
+              </div>
             </div>
 
           </div>
-
-          <div className="form-group">
+          
+          <div className="input-wrapper">
             <label>Senha</label>
-            <input type="password" className="form-control" id="password" placeholder="Enter Fee"
-
-              value={password}
-              onChange={(event) => {
-                setPassword(event.target.value);
-              }}
-            />
-            <div className="icon">
-              <img src={icoPassword} alt="icon" />
+            <div className="input-content">
+              <input type="password" className="form-control" id="password" 
+                value={password}
+                onChange={(event) => {
+                  setPassword(event.target.value);
+                }}
+              />
+              <div className="icon">
+                <img src={icoPassword} alt="icon" />
+              </div>
             </div>
-
           </div>
+                
+          <span>Esqueceu a senha?</span>
         </form>
 
         <div className="btn-wrapper">
